@@ -1,0 +1,15 @@
+{
+  "name": "demo-store",
+  "version": "0.0.1",
+  "description": "A demo store for stripe-cart",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
