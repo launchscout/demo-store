@@ -1,3 +1,10 @@
+---
+pagination:
+    data: prices
+    size: 1
+    alias: price
+permalink: "products/{{ price.product.name | slug }}/"
+---
 <!doctype html>
 <html lang="en">
 
@@ -35,38 +42,31 @@
     </div>
   </header>
 
-  
- 
-
-<main id="main-content" tabindex="-1">
-  
-<section class="[ gap-bottom-900 ]">
-  <div class="[ inner-wrapper ] [ sf-flow ]">
-    <h2 class="[ post-list__heading ] [ text-700 md:text-800 ]">Products</h2>
-    <ol class="[ pad-top-300 ] [ product ] [ ol-reset ]">
-      {% for price in prices %}
-      <li class="product-card sf-flow">
-        <h3 class="font-base leading-tight text-600 weight-mid">
-          <a
-            href=""
-            class="post-list__link"
-            rel="bookmark"
-            >{{ price.product.name }}</a
-          >
-        </h3>
-        <img src="{{ price.product.images[0] }}" alt="">
-        <img src="https://files.stripe.com/links/MDB8YWNjdF8xSTQ2a3FLRkd4TXpHYmdrfGZsX3Rlc3RfUVlQS0RpTXhzNG9lVDhlQ3djUE8yYXdO00JMT3Kxjq" alt="">
-        <p>{{ price.unit_amount | convertCentsToDollars }}</p>
-        <launch-cart-additem price-id="{{price.id}}">
-          <button class="button" type="submit">Add to cart</button>
-        </launch-cart-additem>
-      </li>
-    </ol>
-  </div>
-</section>
 
 
-</main>
+
+  <main id="main-content" tabindex="-1">
+
+    <section class="[ gap-bottom-900 ]">
+      <div class="[ inner-wrapper ] [ sf-flow ]">
+        <h2 class="[ post-list__heading ] [ text-700 md:text-800 ]"><a href="/">Products</a></h2>
+        <ol class="[ pad-top-300 ] [ product ] [ ol-reset ]">
+          <li class="product-card sf-flow">
+            <h3 class="font-base leading-tight text-600 weight-mid">
+              <a href="" class="post-list__link" rel="bookmark">{{ price.product.name }}</a>
+            </h3>
+            <img src="{{ price.product.images[0] }}" alt="">
+            <p>{{ price.unit_amount | convertCentsToDollars }}</p>
+            <launch-cart-additem price-id="{{price.id}}">
+              <button class="button" type="submit">Add to cart</button>
+            </launch-cart-additem>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+
+  </main>
 
 
 </body>
