@@ -4,7 +4,6 @@
 body,h1,h2,h3,h4,p,ul,ol,li,dd,figure,figcaption,dl,dd,dt{margin:0px;padding:0px}
 body{-ms-overflow-style:-ms-autohiding-scrollbar;scroll-behavior:smooth;font-size:1rem;min-height:100vh}
 ul[class],ol[class]{list-style:none}
-a:not([class]){text-decoration:underline;text-decoration-skip-ink:auto;cursor:pointer}
 input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,select::-webkit-input-placeholder{line-height:normal}
 img{
   height: auto;
@@ -25,6 +24,7 @@ img{
   --black: #190641;
   --color-primary: #6042BC;
   --color-primary-light: #9B74E8;
+  --color-action: #F7A006;
 
   --border-radius: 8px;
   --box-shadow: 0 0 20px rgba(0,0,0,.2);
@@ -53,6 +53,10 @@ header {
   padding: var(--space-sm) var(--space-md);
 }
 
+header a {
+  border-width: 0 !important;
+}
+
 main {
   margin: 0 auto;
   max-width: 60rem;
@@ -60,9 +64,16 @@ main {
 }
 
 footer {
+  display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      align-items: baseline;
+      justify-content: space-between;
   margin-top: var(--space-xl);
   padding: var(--space-md) var(--space-md);
+  text-align: center;
 }
+
 
 h1,
 h2,
@@ -78,6 +89,34 @@ h1 {
   margin-bottom: var(--space-lg);
 }
 
+a {
+  border-color: var(--color-primary-light);
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  color: var(--black);
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 2px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:visited {
+  color: var(--color-primary);
+}
+
+a:hover,
+a:active,
+a:focus {
+    border-width: 0 0 4px 0;
+    margin-bottom: 0;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-action);
+  outline-offset: 3px;
+}
+
 .skip-link {
   
 }
@@ -91,7 +130,7 @@ h1 {
   display: grid;
     gap: var(--space-xl);
     flex-wrap: wrap;
-    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
 .product-preview {
@@ -106,6 +145,7 @@ h1 {
 }
 
 .product-preview a {
+  border: 0;
   color: var(--black);
   display: block;
   text-decoration: none;
@@ -165,7 +205,7 @@ h1 {
 
 
 
-.button {
+.button, button {
   background-color: var(--color-primary);
   border: 0;
   border-radius: var(--border-radius);
@@ -178,14 +218,24 @@ h1 {
   transition: var(--transition);
 }
 
-.button:hover,
-.button:active,
-.button:focus {
+.button:hover, button:hover,
+.button:active, button:active,
+.button:focus, button:focus {
   background-color: var(--color-primary-light);
   color: var(--black);
 }
 
+.button:focus-visible, button:focus-visible {
+  outline: 2px solid var(--color-action);
+  outline-offset: 3px;
+}
 
+.flex {
+  display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    align-items: baseline;
+}
 
 
 
