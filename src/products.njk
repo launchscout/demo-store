@@ -24,50 +24,43 @@ permalink: "products/{{ price.product.name | slug }}/"
 
   <link rel="icon" href="/images/favicon.png" type="image/png" />
 
-  <link rel="preload" as="font" type="font/woff2" href="/css/fonts/josefin-sans-v14-latin-700.woff2" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/jjm1gir.css">
 </head>
 
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <header role="banner" class="[ site-head ] [ pad-top-700 ">
-    <div class="wrapper">
-      <span class="visually-hidden">: </span>
-      <div class="[ site-head__inner ] [ md:box-flex space-between align-center ]">
-        <a href="/" class="[ site-head__site-name ] [ leading-tight ]" aria-current=page>
-          <span class="visually-hidden">Homepage</span>
-          <img src="/images/launch-scout-logo.png" width="80" />
-        </a>
-        <launch-cart url="wss://launch-cart.fly.dev/socket" store-id="c4cb5bad-fefc-4e16-8542-88a9ec2fb80b"></launch-cart>
-      </div>
-    </div>
+  <header role="banner" title="Page Header">
+    <a href="/" class="" title="Homepage" aria-current=page>
+      <img src="/images/launch-scout-logo.png" width="80" />
+    </a>
+    <launch-cart url="wss://launch-cart.fly.dev/socket" store-id="c4cb5bad-fefc-4e16-8542-88a9ec2fb80b"></launch-cart>
   </header>
 
-
-
-
   <main id="main-content" tabindex="-1">
-
-    <section class="[ gap-bottom-900 ]">
-      <div class="[ inner-wrapper ] [ sf-flow ]">
-        <h2 class="[ post-list__heading ] [ text-700 md:text-800 ]"><a href="/">Products</a></h2>
-        <ol class="[ pad-top-300 ] [ product ] [ ol-reset ]">
-          <li class="product-card sf-flow">
-            <h3 class="font-base leading-tight text-600 weight-mid">
-              <a href="" class="post-list__link" rel="bookmark">{{ price.product.name }}</a>
-            </h3>
-            <img src="{{ price.product.images[0] }}" alt="">
-            <p>{{ price.unit_amount | convertCentsToDollars }}</p>
-            <launch-cart-additem price-id="{{price.id}}">
-              <button class="button" type="submit">Add to cart</button>
-            </launch-cart-additem>
-          </li>
-        </ol>
+    <a href="/">&larr; Back to Products</a>
+    <h1>Product Details</h1>
+    <div class="product">
+      <img src="{{ price.product.images[0] }}" alt="{{ price.product.name}} Product Image">
+      <div class="product__details">
+        <div class="product__header">
+          <div>
+            <h2>{{ price.product.name }}</h2>
+            <p class="product__price" title="Product Price">{{ price.unit_amount | convertCentsToDollars }}</p>
+          </div>
+          <launch-cart-additem price-id="{{price.id}}">
+            <button class="button" type="submit">Add to cart</button>
+          </launch-cart-additem>
+        </div>
+        <p class="product__description" title="Product Description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
       </div>
-    </section>
-
-
+    </div>
   </main>
 
+  <footer>
+    Footer links go here
+  </footer>
 
 </body>
 
