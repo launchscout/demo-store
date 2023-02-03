@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "launch-cart": "^0.0.6",
     "live-server": "^1.2.2"
   },
   "devDependencies": {
