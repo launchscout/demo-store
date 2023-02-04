@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Launch Scout Store</title>
+  <meta name="description" content="Art, writing, crafting, &amp; flavors by Sia Karamalegos">
+  <meta property="og:description" content="Art, writing, crafting, &amp; flavors by Sia Karamalegos" />
+
+  <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/launch-cart"></script>
+
+  <link rel="stylesheet" href="/css/index.css">
+
+  <link rel="icon" href="/images/favicon.png" type="image/png" />
+
+  <link rel="stylesheet" href="https://use.typekit.net/jjm1gir.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header role="banner" title="Page Header">
+    <a href="/" class="" title="Homepage" aria-current=page>
+      <img src="/images/launch-scout-logo.png" width="80" />
+    </a>
+    <launch-cart url="wss://launch-cart.fly.dev/socket" store-id="c4cb5bad-fefc-4e16-8542-88a9ec2fb80b"></launch-cart>
+  </header>
+
+  {{ content | safe }}}
+  <footer>
+    <span class="flex">
+      <a href="https://github.com/launchscout/demo-store" target="blank">Demo Store on GitHub</a>
+      <a href="https://github.com/launchscout/launch_cart" target="blank">Launch Cart on GitHub</a>
+    </span>
+
+    <p>
+      Happily built and maintained by <a href="https://launchscout.com/" target="blank">Launch Scout</a>.
+    </p>
+  </footer>
+
+</body>
+
+</html>
