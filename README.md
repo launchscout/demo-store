@@ -1,3 +1,3 @@
-# stripe-cart Demo Store
+# launch-cart Demo Store
 
-This is the demo store for [stripe_cart](https://github.com/launchscout/stripe_cart)
+This is the demo store for [launch-cart](https://launch-cart.fly.dev)
