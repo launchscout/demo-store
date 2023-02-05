@@ -1,4 +1,5 @@
 const eleventySass = require("eleventy-sass");
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/css');
@@ -10,6 +11,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(eleventySass);
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   
   return {
     htmlTemplateEngine: "njk",
