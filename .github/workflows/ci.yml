@@ -36,7 +36,7 @@ jobs:
       - name: install npms
         run: npm install
       - name: build site
-        run: npm run build
+        run: npm run gh-build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
