@@ -1,3 +1,5 @@
+const eleventySass = require("eleventy-sass");
+
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/css');
   eleventyConfig.addPassthroughCopy({'node_modules/launch-cart/dist/index.js': 'js/launch-cart.js'});
@@ -6,6 +8,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('convertCentsToDollars', (cents) => {
     return (cents / 100).toLocaleString("en-US", {style:"currency", currency:"USD"})
   });
+
+  eleventyConfig.addPlugin(eleventySass);
   
   return {
     htmlTemplateEngine: "njk",
