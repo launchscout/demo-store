@@ -1,3 +1,4 @@
+require('dotenv').config()
 const eleventySass = require("eleventy-sass");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
