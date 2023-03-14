@@ -4,7 +4,7 @@
   "description": "A demo store for stripe-cart",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve",
+    "start": "eleventy --serve --port 8081",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "eleventy",
     "gh-build": "eleventy --pathprefix 'demo-store'"

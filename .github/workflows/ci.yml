@@ -20,6 +20,7 @@ concurrency:
 env:
   STORE_ID: ${{ secrets.STORE_ID }}
   STRIPE_API_KEY: ${{ secrets.STRIPE_API_KEY }}
+  STORE_URL: ${{ secrets.STORE_URL }}
 
 jobs:
   # Single deploy job since we're just deploying
